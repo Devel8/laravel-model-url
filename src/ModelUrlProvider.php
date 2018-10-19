@@ -16,6 +16,10 @@ class ModelUrlProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/model-url.php' => config_path('model-url.php'),
         ], 'config');
+
+        $this->publishes([
+            __DIR__.'/../database/migrations' => database_path('migrations'),
+        ], 'migrations');
     }
 
     /**
